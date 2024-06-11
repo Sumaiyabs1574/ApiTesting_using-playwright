@@ -20,6 +20,10 @@ data:{
 
 
 })
+//validate status code
+expect (postApiResponse.ok()).toBeTruthy();
+expect (postApiResponse.status()).toBe(200);
+
   const postApiResponseBody = await postApiResponse.json();
 console.log(postApiResponseBody);
 

@@ -24,7 +24,11 @@ data:{
 expect (postApiResponse.ok()).toBeTruthy();
 expect (postApiResponse.status()).toBe(200);
 
-  const postApiResponseBody = await postApiResponse.json();
+
+const postApiResponseBody = await postApiResponse.json();
 console.log(postApiResponseBody);
 
+//Validate api response 
+expect(postApiResponseBody.booking).toHaveProperty('firstname','sumaiya')
+expect(postApiResponseBody.booking).toHaveProperty('lastname','habib')
 })

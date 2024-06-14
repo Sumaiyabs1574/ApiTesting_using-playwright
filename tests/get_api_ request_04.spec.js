@@ -10,7 +10,7 @@ data:bookingApiRequestBody
  const bid=getApiResponse.bookingid
 
 
- const getApiResponseBody= await request.get('/booking/${bid}');
+ const getApiResponseBody= await request.get(`b/booking/${bid}`);
 await console.log(getApiResponseBody.json)
 
 })
